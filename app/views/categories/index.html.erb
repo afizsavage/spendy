@@ -1,0 +1,16 @@
+<div>
+    <% if @categories.empty? %>
+    <p class="no-trans">It seems your category list is empty! </p>
+    <%= link_to new_category_path do %>
+    <div class="border border-white w-full h-16 text-white flex items-center justify-center rounded-md px-16">
+      <p>ADD NEW CATEGORY</p>
+    </div>
+  <% end %>
+    <% else %>
+        <h1>Categories</h1>
+        <ul>
+            <li></li>
+        </ul>
+        <button>Add category</button>
+    <% end %>
+</div>
