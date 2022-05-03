@@ -1,19 +1,19 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = current_user.categories.all.order(created_at: :desc)
+    @categories = Category.all
   end
 
   def show
-    @category = current_user.categories.find(params[:id])
+    @category = categories.find(params[:id])
     @transactions = @category.transactions.all.where(category_id: @category.id)
   end
 
   def new
-    @category = category.new
+    @category = Category.new
   end
 
   def create
-    @category = current_user.categories.new(category_params)
+    @category = categories.new(category_params)
     if @category.save
       flash[:notice] = 'category created'
       redirect_to categories_path
