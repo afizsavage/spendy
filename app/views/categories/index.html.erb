@@ -10,8 +10,12 @@
     <% else %>
         <h1>Categories</h1>
         <ul>
-            <li></li>
+            <% @categories.each do |category| %>
+            <li><%= category.name%></li>
+            <%end%>
         </ul>
-        <button>Add category</button>
+        <%= link_to(new_category_path, class: '') do %>
+          <button type="button">Add Category</button>
+        <% end %>
     <% end %>
 </div>
