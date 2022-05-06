@@ -3,5 +3,5 @@ class Category < ApplicationRecord
   has_many :transactions, class_name: 'Transaction', foreign_key: :category_id, dependent: :destroy
   validates :name, presence: true
   validates :icon, presence: true
-  validates :author, presence: true
+  validates :user, presence: true
 end

@@ -1,1 +1,21 @@
-<h1></h1>
+<%= render "partials/header", title: "Categories" %>
+<%= render "partials/subbar" %>
+
+<div class="">
+  <%= form_with model: @category, url: categories_path do |form| %>
+    <div class="">
+      <%= form.label :name %>
+      <%= form.text_field :name, required: true, class: '' %>
+    </div>
+    <div class="">
+      <%= form.label :icon %>
+      <%= form.text_field :icon, required: true, class: '' %>
+    </div>
+    <div>
+      <%= form.hidden_field :user_id, value: current_user.id %>
+    </div>
+    <div class="">
+      <%= form.submit class: '' %>  
+    </div>
+  <% end %>
+</div>

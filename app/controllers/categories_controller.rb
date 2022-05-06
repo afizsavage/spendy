@@ -1,10 +1,10 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.all
+    @categories = current_user.categories.all.order(created_at: :desc)
   end
 
   def show
-    @category = categories.find(params[:id])
+    @category = current_user.categories.find(params[:id])
     @transactions = @category.transactions.all.where(category_id: @category.id)
   end
 
@@ -13,12 +13,12 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = categories.new(category_params)
+    @category = current_user.categories.new(category_params)
     if @category.save
-      flash[:notice] = 'category created'
+      flash[:notice] = 'Category created'
       redirect_to categories_path
     else
-      flash[:alert] = 'category not created'
+      flash[:alert] = 'Category not created'
       render :new
     end
   end
