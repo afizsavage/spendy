@@ -1,4 +1,6 @@
 <%= render "partials/header", title: @category.name %>
+<%= render "partials/subbar" %>
+
 <div>
     <div>
         <span><%= @category.name %><span class="group-amount ent-amount">
@@ -15,11 +17,12 @@
             <% @transactions.each do |transaction|%>
                 <%= transaction.name%>
             <% end %>
+            <div>
+            <%= link_to(new_transaction_path, class: '') do %>
+                <button type="button">Add Transaction</button>
+            <% end %>
+    </div>
         <%end%>
     </div>
-    <div>
-        <%= link_to(new_transaction_path, class: '') do %>
-            <button type="button">Add Transaction</button>
-        <% end %>
-    </div>
+    
 </div>

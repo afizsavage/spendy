@@ -1,3 +1,5 @@
+<%= render "partials/subbar" %>
+
 <%= form_with model: @transaction, html: {'data-turbo' => "false"}, url: transactions_path do |form| %>
     <div class="form-new-title field">
       <%= form.label :name %>

@@ -1,4 +1,6 @@
 <%= render "partials/header", title: "CATEGORIES" %>
+<%= render "partials/subbar" %>
+
 <div>
     <% if @categories.empty? %>
       <p class="">It seems your category list is empty! </p>
@@ -11,8 +13,17 @@
             <% @categories.each do |category| %>
               <li>
                 <%= link_to(category_path(category)) do %>
-                  <%= category.name%>
-                <% end %>
+                <figure>
+                  <img src="<%= category.icon %>" alt="icon">
+                  <figcaption>
+                    <h3><%= category.name %></h3>
+                    <small><%= category.created_at.to_date.to_s %></small>
+                  </figcaption>
+                </figure>
+                <h4 class="group-amount">
+                <%= Transaction.total_amount(category.transactions) %>
+                </h4>
+                <%end%>
               </li>
             <%end%>
         </ul>
