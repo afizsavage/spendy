@@ -1,17 +1,19 @@
 <%= render "partials/header", title: "CATEGORIES" %>
 <div>
     <% if @categories.empty? %>
-    <p class="no-trans">It seems your category list is empty! </p>
-    <%= link_to new_category_path do %>
-    <div class="border border-white w-full h-16 text-white flex items-center justify-center rounded-md px-16">
-      <p>ADD NEW CATEGORY</p>
-    </div>
-  <% end %>
+      <p class="">It seems your category list is empty! </p>
+      <%= link_to new_category_path do %>
+        <button>Add Category</button>
+      <% end %>
     <% else %>
-        <h1>Categories</h1>
+        <div><span></span></div>
         <ul>
             <% @categories.each do |category| %>
-            <li><%= category.name%></li>
+              <li>
+                <%= link_to(category_path(category)) do %>
+                  <%= category.name%>
+                <% end %>
+              </li>
             <%end%>
         </ul>
         <%= link_to(new_category_path, class: '') do %>

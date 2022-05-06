@@ -4,11 +4,11 @@ class TransactionsController < ApplicationController
   end
 
   def show
-    @transaction = transaction.find(params[:id])
+    @transaction = Transaction.find(params[:id])
   end
 
   def new
-    @transaction = transaction.new
+    @transaction = Transaction.new
     @categories = current_user.categories
   end
 
@@ -16,7 +16,7 @@ class TransactionsController < ApplicationController
     @transaction = current_user.transactions.new(transaction_params)
     if @transaction.save
       flash[:notice] = 'Transaction created'
-      redirect_to transactions_path
+      redirect_to single_category_path(@transaction.category_id)
     else
       flash[:alert] = 'Transaction not created'
       render :new
