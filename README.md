@@ -14,6 +14,14 @@ Spendy is fullstack web appliactions that helps users to track purchases.
 - Ruby on Rails
 - Postgresql
 
+## Live Demo
+
+- [Demo](https://mighty-refuge-76823.herokuapp.com/)
+
+## Video Presentation
+
+- [Video](https://drive.google.com/file/d/1RvsTJASZ36tnAQYaLLvOs5ZcyPiaD8dm/view?usp=sharing)
+
 ## Getting Started
 
 **To get a local copy of the project**
