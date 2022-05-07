@@ -2,9 +2,9 @@
 
 <div class="cat">
     <% if @categories.empty? %>
-      <p class="">It seems your category list is empty! </p>
+      <p class="flex">It seems your category list is empty! </p>
       <%= link_to new_category_path do %>
-        <button>Add Category</button>
+        <button class="add">Add Category</button>
       <% end %>
     <% else %>
         <ul>

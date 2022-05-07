@@ -1,21 +1,18 @@
-<%= render "partials/header", title: "Categories" %>
-<%= render "partials/subbar" %>
-
-<div class="">
-  <%= form_with model: @category, url: categories_path do |form| %>
-    <div class="">
-      <%= form.label :name %>
-      <%= form.text_field :name, required: true, class: '' %>
-    </div>
-    <div class="">
-      <%= form.label :icon %>
-      <%= form.text_field :icon, required: true, class: '' %>
-    </div>
-    <div>
-      <%= form.hidden_field :user_id, value: current_user.id %>
-    </div>
-    <div class="">
-      <%= form.submit class: '' %>  
-    </div>
-  <% end %>
+<div class="new-cat">
+  <%= render "partials/header", title: "Categories" %>
+  <div class="j-page">
+    <%= render "partials/subbar", title: "Add Category" %>
+    <div class="form-wrap flex">
+    <%= form_with model: @category, url: categories_path do |form| %>
+        <%= form.text_field :name, required: true, placeholder: 'Name' ,class: 'input' %>
+        <%= form.text_field :icon, required: true,  placeholder: 'Icon' ,class: 'input' %>    
+        <%= form.hidden_field :user_id, value: current_user.id %>
+      <div class="add-cat">
+        <%= form.submit class: 'add' %>  
+      </div>
+    <% end %>
+  </div>
+  </div>
 </div>
+
+

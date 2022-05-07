@@ -45,6 +45,10 @@ main {
   width: 80%;
 }
 
+.absent {
+  margin: 1rem 0rem;
+}
+
 .ic-bro > div {
   display: flex;
   justify-content: space-between;
@@ -64,6 +68,34 @@ main {
 }
 
 .cat > a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  background-color: #5fb523;
+  padding: 0.7rem;
+}
+
+.new-cat {
+  position: relative;
+  height: 100%;
+}
+
+.trans {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 0.5rem;
+  align-items: center;
+  height: 2.5rem;
+  margin-bottom; 1rem;
+}
+
+.new-cat .sub-title {
+  right: -30%;
+}
+
+.add-cat {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -176,6 +208,7 @@ header {
 
 .j-page {
   position: relative;
+  height: 100%;
 }
 
 .subbar {

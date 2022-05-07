@@ -1,28 +1,26 @@
 <%= render "partials/header", title: @category.name %>
-<%= render "partials/subbar" %>
+<div class="new-cat">
+
+<%= render "partials/subbar", title: nil %>
 
 <div>
-    <div>
-        <span><%= @category.name %><span class="group-amount ent-amount">
-            <%= "$#{@transactions.sum(:amount)}" %>
-        </span>
-    </div>
-    <div>
+    <div class="flex">
         <%if @transactions.empty?%>
-            <span> You don't have any transaction in this category!</span>
-            <%= link_to(new_transaction_path, class: '') do %>
-            <button type="button">Add Transactions</button>
+            <span class="absent"> You don't have any transaction in this category!</span>
+            <%= link_to(new_transaction_path, class: 'add-cat') do %>
+            <button class="add" type="button">Add Transactions</button>
             <% end %>
         <% else %>
             <% @transactions.each do |transaction|%>
                 <%= transaction.name%>
             <% end %>
             <div>
-            <%= link_to(new_transaction_path, class: '') do %>
-                <button type="button">Add Transaction</button>
+            <%= link_to(new_transaction_path, class: 'add-cat') do %>
+                <button class="add" type="button">Add Transaction</button>
             <% end %>
     </div>
         <%end%>
     </div>
     
+</div>
 </div>
