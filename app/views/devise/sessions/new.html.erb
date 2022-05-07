@@ -1,21 +1,14 @@
-<div>
-  <%= render "partials/subbar" %>
+<div class="j-page">
+  <%= render "partials/subbar", title: "Login" %>
 
   <div class="form-wrap flex">
   <%= render "partials/msg" %>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
       <%= f.email_field :email, autofocus: true, autocomplete: "email" ,  placeholder: "Email", class: "input"%>
-    </div>
-
-    <div class="field">
       <%= f.password_field :password, autocomplete: "current-password",  placeholder: "Password", class: "input" %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "Log in" %>
-    </div>
+      <%= f.submit "Log in", class: "in" %>
   <% end %>
+  <button class="forgot">Forgot password?</button>
   </div>
 </div>
 

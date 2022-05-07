@@ -53,6 +53,14 @@
 
 .form-wrap {
   padding-top: 1rem;
+  flex-direction: column;
+}
+
+.forgot {
+  margin: 1rem;
+  background: inherit;
+  border: none;
+  color: #434b54;
 }
 
 .form-wrap > form {
@@ -69,11 +77,32 @@
   height: 100%;
 }
 
+.lbar {
+  width: 50%;
+}
+
+.sub-title {
+  font-size: 1.2rem;
+  position: absolute;
+  right: -12.5%;
+  color: #fff;
+}
+
+.rbar {
+  display: flex;
+  position: relative;
+  width: 50%;
+  align-items: center;
+}
+
+.j-page {
+  position: relative;
+}
+
 .subbar {
   background-color: #3778c2;
   height: 2rem;
   display: flex;
-  align-items: center;
 }
 
 .bk-icon {
@@ -84,6 +113,16 @@
   background-color: transperant;
   border: none;
   background-size: 80%;
+}
+
+.in {
+  position: absolute;
+  background-color: inherit;
+  top: 0.5rem;
+  right: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  color: #fffa;
 }
 
 .splash {
