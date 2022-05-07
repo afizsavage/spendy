@@ -37,4 +37,3 @@ RSpec.describe 'Category', type: :request do
     end
   end
 end
-
