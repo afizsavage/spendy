@@ -1,28 +1,44 @@
-<%= render "partials/header", title: @category.name %>
-<%= render "partials/subbar" %>
+<%= render "partials/header", title: "Transactions" %>
+<div class="new-cat grayout">
+
+<%= render "partials/subbar", title: nil %>
 
 <div>
-    <div>
-        <span><%= @category.name %><span class="group-amount ent-amount">
-            <%= "$#{@transactions.sum(:amount)}" %>
-        </span>
-    </div>
-    <div>
+    <div class="">
         <%if @transactions.empty?%>
-            <span> You don't have any transaction in this category!</span>
-            <%= link_to(new_transaction_path, class: '') do %>
-            <button type="button">Add Transactions</button>
+            <span class="absent"> You don't have any transaction in this category!</span>
+            <%= link_to(new_transaction_path, class: 'add-cat') do %>
+            <button class="add" type="button">Add Transactions</button>
             <% end %>
         <% else %>
-            <% @transactions.each do |transaction|%>
-                <%= transaction.name%>
-            <% end %>
+            <div class="track">
+                <span><%= @category.name%></span>
+                <span>$<%= Transaction.total_amount(@category.transactions) %></span>
+            </div>
+            <ul class="t-bro">
+                <% @transactions.each do |transaction|%>
+                    <li class="i-wrap">
+                        <div class="t-bone">
+                            <span>
+                                <%= transaction.name%>                    
+                            </span>
+                            <span>
+                                <%= transaction.amount%>                    
+                            </span>
+                        </div>
+                        <p>
+                        <small class=""><%= transaction.created_at.to_date.to_s %></small>
+                        </p>
+                    </li>
+                <% end %>
+            </ul>
             <div>
-            <%= link_to(new_transaction_path, class: '') do %>
-                <button type="button">Add Transaction</button>
+            <%= link_to(new_transaction_path, class: 'add-cat') do %>
+                <button class="add" type="button">Add Transaction</button>
             <% end %>
     </div>
         <%end%>
     </div>
     
+</div>
 </div>

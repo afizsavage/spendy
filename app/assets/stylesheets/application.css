@@ -13,3 +13,264 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+main {
+  height: 100vh;
+}
+
+.i-wrap {
+  background-color: #fff;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+  box-shadow: 2px 2px 2px gray;
+}
+
+.i-wrap > a {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: #434b54;
+}
+
+.i-icon {
+  width: 20%;
+}
+
+.ic-bro {
+  width: 80%;
+}
+
+.absent {
+  margin: 1rem 0rem;
+}
+
+.ic-bro > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+}
+
+.grayout {
+  background-color: #dddbdc;
+}
+
+.track {
+  background-color: #fff;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.t-bone {
+  display: flex;
+  justify-content: space-between; 
+  margin-bottom: 1rem;
+}
+
+.t-bro {
+  list-style: none;
+  padding: 0rem 1rem;
+}
+
+.cat {
+  padding: 1rem 1rem;
+  position: relative;
+  background-color: #dddbdc;
+  height: 100%;
+}
+
+.cat > ul {
+  list-style: none;
+  background-color: inherit;
+}
+
+.cat > a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  background-color: #5fb523;
+  padding: 0.7rem;
+}
+
+.new-cat {
+  position: relative;
+  height: 100%;
+}
+
+.trans {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 0.5rem;
+  align-items: center;
+  height: 2.5rem;
+  margin-bottom; 1rem;
+}
+
+.new-cat .sub-title {
+  right: -30%;
+}
+
+.add-cat {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  background-color: #5fb523;
+  padding: 0.7rem;
+}
+
+.add {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fffa;
+  background-color: inherit;
+  color: #fffa;
+  font-size: 1.2rem;
+}
+
+header {
+  background-color: #3778c2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.5rem;
+  padding: 0px 0.5rem;
+}
+
+.m-btn {
+  background: url('/menu_icon.svg') center center no-repeat;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+}
+
+.auth-btn {
+  color: white;
+  width: 100%;
+  height: 2.5rem;
+  background-color: #3778c2;
+  border: none;
+  font-size: 1.1rem;
+}
+
+.name {
+  color: #434b54;
+  font-size: 2rem;
+}
+
+.join {
+  background-color: #fff;
+  color: #434b54;
+}
+
+.auth-wrapper {
+  flex-direction: column;
+  position: absolute;
+  bottom: 0px;
+  left: 5%;
+  right: 5%;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.form-wrap {
+  padding-top: 1rem;
+  flex-direction: column;
+}
+
+.forgot {
+  margin: 1rem;
+  background: inherit;
+  border: none;
+  color: #434b54;
+}
+
+.form-wrap > form {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  height: 2rem;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.lbar {
+  width: 50%;
+}
+
+.sub-title {
+  font-size: 1.2rem;
+  position: absolute;
+  right: -12.5%;
+  color: #fff;
+}
+
+.rbar {
+  display: flex;
+  position: relative;
+  width: 50%;
+  align-items: center;
+}
+
+.j-page {
+  position: relative;
+  height: 100%;
+}
+
+.subbar {
+  background-color: #3778c2;
+  height: 2rem;
+  display: flex;
+}
+
+.bk-icon {
+  background: url('/back.png') center center no-repeat;
+  width: 3rem;
+  height: 1rem;
+  display: block;
+  background-color: transperant;
+  border: none;
+  background-size: 80%;
+}
+
+.hence {
+  font-size: 1rem;
+  color: #fffa;
+  border: none;
+  background-color: inherit;
+}
+
+.h-tle {
+  fontsize: 1.1rem;
+  color: #fff;
+}
+
+.in {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.splash {
+  position: relative;
+  align-items: center;
+}

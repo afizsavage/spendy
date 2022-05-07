@@ -1,26 +1,14 @@
-<h2>Log in</h2>
-<%= render "partials/msg" %>
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<div class="j-page grayout">
+  <%= render "partials/subbar", title: "Login" %>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
+  <div class="form-wrap flex">
+  <%= render "partials/msg" %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" ,  placeholder: "Email", class: "input"%>
+      <%= f.password_field :password, autocomplete: "current-password",  placeholder: "Password", class: "input" %>
+      <%= f.submit "Log in", class: "in hence" %>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <button class="forgot">Forgot password?</button>
   </div>
-<% end %>
+</div>
 
-<%= render "devise/shared/links" %>

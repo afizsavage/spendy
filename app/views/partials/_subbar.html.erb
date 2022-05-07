@@ -1,5 +1,9 @@
-<div>
-    <%= link_to(categories_path) do %>
-        <button class="auth-btn sign-btn">back</button>
-    <% end %> 
+<div class="subbar">
+    <div class="rbar">
+        <%= link_to("/") do %>
+            <button class="bk-icon" sr-only="go back"></button>
+        <% end %> 
+        <h2 class="sub-title"><%= title %></h2>
+    </div>
+    <div class="lbar"></div>
  </div>

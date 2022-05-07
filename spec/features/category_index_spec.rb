@@ -16,10 +16,6 @@ describe 'category index page', type: :feature do
       expect(page).to have_current_path(authenticated_root_path)
     end
 
-    it 'shows category title' do
-      expect(page).to have_content('CATEGORIES')
-    end
-
     it 'should have dev category' do
       expect(page).to have_text('It seems your category list is empty!')
     end

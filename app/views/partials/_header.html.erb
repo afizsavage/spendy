@@ -1,6 +1,7 @@
 <header>
-  <h2>
+<button class="m-btn"></button>
+  <h2 class="h-tle">
     <%= title %>
   </h2>
-    <%= button_to('Logout', destroy_user_session_path, method: "delete", remote: true, data: { confirm: 'Are you sure?', disable_with: 'loading...' }) %>
+    <%= button_to('Logout', destroy_user_session_path, method: "delete", remote: true, class: "hence", data: { confirm: 'Are you sure?', disable_with: 'loading...' }) %>
 </header>
