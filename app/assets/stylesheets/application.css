@@ -55,6 +55,31 @@ main {
   margin-bottom: 1.1rem;
 }
 
+.grayout {
+  background-color: #dddbdc;
+}
+
+.track {
+  background-color: #fff;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.t-bone {
+  display: flex;
+  justify-content: space-between; 
+  margin-bottom: 1rem;
+}
+
+.t-bro {
+  list-style: none;
+  padding: 0rem 1rem;
+}
+
 .cat {
   padding: 1rem 1rem;
   position: relative;
