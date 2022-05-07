@@ -1,0 +1,14 @@
+<div class="j-page grayout">
+  <%= render "partials/subbar", title: "Register" %>
+    <div class="form-wrap flex">
+      <%= form_for(resource, as: resource_name, html: {'data-turbo' => "false"}, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+          <%= f.text_field :name, class: "texto", autofocus: true, placeholder: "Fullname", class: "input" %>
+          <%= f.email_field :email, class: "texto", autofocus: true, autocomplete: "email", placeholder: "Email", class: "input" %>
+          <%= f.password_field :password, class: "texto", autocomplete: "new-password", placeholder: "Password", class: "input" %>
+          <%= f.password_field :password_confirmation, class: "texto", autocomplete: "new-password", placeholder: "Confirm password", class: "input" %>    
+          <%= f.submit "Sign up", class: "in hence" %>
+      <% end %>
+    </div>
+</div>
+

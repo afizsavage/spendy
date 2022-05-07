@@ -1,0 +1,37 @@
+<%= render "partials/header", title: "Categories" %>
+
+<div class="cat">
+    <% if @categories.empty? %>
+      <p class="flex">It seems your category list is empty! </p>
+      <%= link_to new_category_path do %>
+        <button class="add">Add Category</button>
+      <% end %>
+    <% else %>
+        <ul>
+            <% @categories.each do |category| %>
+              <li class="i-wrap">
+                <%= link_to(category_path(category)) do %>
+                  <div class="i-icon">
+                    <img src="<%= category.icon %>" alt="icon">
+                  </div>
+                
+                  <div class="ic-bro">
+                    <div>
+                      <h3 class=""><%= category.name %></h3>
+                      <h4 class="">
+                        $<%= Transaction.total_amount(category.transactions) %>
+                      </h4>
+                    </div>
+                    <p>
+                      <small class=""><%= category.created_at.to_date.to_s %></small>
+                    </p>
+                  </div>
+                <%end%>
+              </li>
+            <%end%>
+        </ul>
+        <%= link_to(new_category_path) do %>
+          <button type="button" class="add">Add Category</button>
+        <% end %>
+    <% end %>
+</div>

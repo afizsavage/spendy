@@ -1,0 +1,13 @@
+<div class="splash container flex">
+  <div class="sp-child"> 
+    <h2 class="name">Spendy</h2>
+    <div class="auth-wrapper flex">
+      <%= link_to(new_user_session_path) do %>
+        <button class="auth-btn ">Log in</button>
+      <% end %>
+      <%= link_to(new_user_registration_path) do %>
+        <button class="auth-btn join">Sign up</button>
+      <% end %>      
+    </div>
+  </div>
+</div>

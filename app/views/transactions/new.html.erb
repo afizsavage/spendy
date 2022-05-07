@@ -1,0 +1,22 @@
+
+<div class="new-cat grayout">
+  <%= render "partials/header", title: "Transactions" %>
+  <div class="j-page">
+    <%= render "partials/subbar", title: nil %>
+    <div class="form-wrap flex">
+      <%= form_with model: @transaction, html: {'data-turbo' => "false"}, url: transactions_path do |form| %>
+    
+      <%= form.text_field :name, required: true, placeholder: "Name", class: 'input'  %>
+      <%= form.number_field :amount, placeholder: "Amount", class: "input" %>
+      <%= form.hidden_field :author_id, required: true, value: current_user.id %>
+      <%= form.select :category_id, @categories.collect { |category| [category.name, category.id] }, {selected: params['id']}, class: "input"%>
+    <div class="add-cat">
+      <%= form.submit 'Create Transaction', class: 'add' %> 
+    </div>
+    <% end %>
+    <div>
+  </div>
+</div>
+
+
+

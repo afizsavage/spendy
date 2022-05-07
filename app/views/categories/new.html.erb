@@ -1,0 +1,18 @@
+<div class="new-cat grayout">
+  <%= render "partials/header", title: "Categories" %>
+  <div class="j-page">
+    <%= render "partials/subbar", title: "Add Category" %>
+    <div class="form-wrap flex">
+    <%= form_with model: @category, url: categories_path do |form| %>
+        <%= form.text_field :name, required: true, placeholder: 'Name' ,class: 'input' %>
+        <%= form.text_field :icon, required: true,  placeholder: 'Icon' ,class: 'input' %>    
+        <%= form.hidden_field :user_id, value: current_user.id %>
+      <div class="add-cat">
+        <%= form.submit class: 'add' %>  
+      </div>
+    <% end %>
+  </div>
+  </div>
+</div>
+
+
