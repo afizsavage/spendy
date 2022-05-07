@@ -1,33 +1,37 @@
 <%= render "partials/header", title: "Categories" %>
 
-<div>
+<div class="cat">
     <% if @categories.empty? %>
       <p class="">It seems your category list is empty! </p>
       <%= link_to new_category_path do %>
         <button>Add Category</button>
       <% end %>
     <% else %>
-        <div><span></span></div>
         <ul>
             <% @categories.each do |category| %>
-              <li>
+              <li class="i-wrap">
                 <%= link_to(category_path(category)) do %>
-                <figure>
-                  <img src="<%= category.icon %>" alt="icon">
-                  <figcaption>
-                    <h3><%= category.name %></h3>
-                    <small><%= category.created_at.to_date.to_s %></small>
-                  </figcaption>
-                </figure>
-                <h4 class="group-amount">
-                <%= Transaction.total_amount(category.transactions) %>
-                </h4>
+                  <div class="i-icon">
+                    <img src="<%= category.icon %>" alt="icon">
+                  </div>
+                
+                  <div class="ic-bro">
+                    <div>
+                      <h3 class=""><%= category.name %></h3>
+                      <h4 class="">
+                        $<%= Transaction.total_amount(category.transactions) %>
+                      </h4>
+                    </div>
+                    <p>
+                      <small class=""><%= category.created_at.to_date.to_s %></small>
+                    </p>
+                  </div>
                 <%end%>
               </li>
             <%end%>
         </ul>
-        <%= link_to(new_category_path, class: '') do %>
-          <button type="button">Add Category</button>
+        <%= link_to(new_category_path) do %>
+          <button type="button" class="add">Add Category</button>
         <% end %>
     <% end %>
 </div>

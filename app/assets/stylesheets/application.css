@@ -23,6 +23,65 @@ main {
   height: 100vh;
 }
 
+.i-wrap {
+  background-color: #fff;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+  box-shadow: 2px 2px 2px gray;
+}
+
+.i-wrap > a {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: #434b54;
+}
+
+.i-icon {
+  width: 20%;
+}
+
+.ic-bro {
+  width: 80%;
+}
+
+.ic-bro > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+}
+
+.cat {
+  padding: 1rem 1rem;
+  position: relative;
+  background-color: #dddbdc;
+  height: 100%;
+}
+
+.cat > ul {
+  list-style: none;
+  background-color: inherit;
+}
+
+.cat > a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  background-color: #5fb523;
+  padding: 0.7rem;
+}
+
+.add {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fffa;
+  background-color: inherit;
+  color: #fffa;
+  font-size: 1.2rem;
+}
+
 header {
   background-color: #3778c2;
   display: flex;
