@@ -19,6 +19,26 @@
   margin: 0px;
 }
 
+main {
+  height: 100vh;
+}
+
+header {
+  background-color: #3778c2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.5rem;
+  padding: 0px 0.5rem;
+}
+
+.m-btn {
+  background: url('/menu_icon.svg') center center no-repeat;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+}
+
 .auth-btn {
   color: white;
   width: 100%;
@@ -115,21 +135,25 @@
   background-size: 80%;
 }
 
-.in {
-  position: absolute;
-  background-color: inherit;
-  top: 0.5rem;
-  right: 0.5rem;
-  border: none;
+.hence {
   font-size: 1rem;
   color: #fffa;
+  border: none;
+  background-color: inherit;
+}
+
+.h-tle {
+  fontsize: 1.1rem;
+  color: #fff;
+}
+
+.in {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 
 .splash {
   position: relative;
   align-items: center;
-}
-
-main {
-  height: 100vh;
 }
